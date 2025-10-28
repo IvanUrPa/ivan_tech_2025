@@ -1,0 +1,68 @@
+# ===========================================
+# 🌐 WordPress - .gitignore seguro para GitHub público
+# ===========================================
+
+# Ignorar todo por defecto
+*
+
+# ===========================================
+# ✅ Archivos y carpetas que sí deben incluirse
+# ===========================================
+
+# wp-content (solo temas y plugins permitidos)
+!wp-content/
+wp-content/*
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/ivantech-theme/
+
+!wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/ivantech-plugin/
+wp-content/plugins/plugin-tercero-importante/
+
+# Archivos del proyecto que sí deben incluirse
+!.gitignore
+!README.md
+!LICENSE
+!composer.json
+!composer.lock
+!package.json
+!webpack.config.js
+!wp-config-sample.php
+!.env.example
+
+# ===========================================
+# 🚫 Archivos sensibles o innecesarios
+# ===========================================
+
+# Configuración con credenciales
+wp-config.php
+.env
+
+# Archivos de carga y caché
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/debug.log
+
+# Core de WordPress (no versionar)
+wp-admin/
+wp-includes/
+index.php
+license.txt
+readme.html
+xmlrpc.php
+
+# Archivos temporales o del sistema
+*.log
+*.sql
+*.tar.gz
+*.zip
+*.bak
+.DS_Store
+Thumbs.db
+
+# Dependencias
+node_modules/
+vendor/
