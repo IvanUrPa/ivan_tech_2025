@@ -13,7 +13,7 @@
 !wp-content/
 wp-content/*
 !wp-content/themes/
-wp-content/themes/*
+#wp-content/themes/*
 !wp-content/themes/ivantech-theme/
 
 !wp-content/plugins/
