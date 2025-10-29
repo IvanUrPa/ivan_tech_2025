@@ -1,27 +1,71 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+
 # ===========================================
 # 🌐 WordPress - .gitignore seguro para GitHub público
 # ===========================================
 
-# Ignorar todo por defecto
-*
+# ===========================================
+# 🚫 Archivos sensibles o innecesarios
+# ===========================================
+
+# Core
+#
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+.env
+
+# Ignorar la caché de plugins y temas
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/debug.log
+
+# Ignorar archivos temporales y de sistema operativo
+*.sql
+*.log
+*.tar.gz
+*.zip
+*.bak
+.DS_Store
+Thumbs.db
+
+# htaccess
+/.htaccess
+
+# Dependencias
+vendor/
+node_modules/
+
 
 # ===========================================
 # ✅ Archivos y carpetas que sí deben incluirse
 # ===========================================
 
-# wp-content (solo temas y plugins permitidos)
-!wp-content/
-wp-content/*
-!wp-content/themes/
-#wp-content/themes/*
-!wp-content/themes/ivantech-theme/
+# All plugins
+#
+/wp-content/plugins/*
+!/wp-content/plugins/ivantech-plugin/
 
-!wp-content/plugins/
-wp-content/plugins/*
-!wp-content/plugins/ivantech-plugin/
-!wp-content/plugins/plugin-tercero-importante/
+# All themes
+#
+/wp-content/themes/*
+!/wp-content/themes/ivantech-theme/
 
 # Archivos del proyecto que sí deben incluirse
+#
 !.gitignore
 !README.md
 !LICENSE
@@ -31,38 +75,3 @@ wp-content/plugins/*
 !webpack.config.js
 !wp-config-sample.php
 !.env.example
-
-# ===========================================
-# 🚫 Archivos sensibles o innecesarios
-# ===========================================
-
-# Configuración con credenciales
-wp-config.php
-.env
-
-# Archivos de carga y caché
-wp-content/uploads/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/debug.log
-
-# Core de WordPress (no versionar)
-wp-admin/
-wp-includes/
-index.php
-license.txt
-readme.html
-xmlrpc.php
-
-# Archivos temporales o del sistema
-*.log
-*.sql
-*.tar.gz
-*.zip
-*.bak
-.DS_Store
-Thumbs.db
-
-# Dependencias
-node_modules/
-vendor/
