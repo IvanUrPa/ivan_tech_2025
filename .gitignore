@@ -19,7 +19,7 @@ wp-content/themes/*
 !wp-content/plugins/
 wp-content/plugins/*
 !wp-content/plugins/ivantech-plugin/
-wp-content/plugins/plugin-tercero-importante/
+!wp-content/plugins/plugin-tercero-importante/
 
 # Archivos del proyecto que sí deben incluirse
 !.gitignore
