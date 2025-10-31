@@ -1,0 +1,266 @@
+/* 
+1. Menú Header
+2. Menú Offcanvas
+*/
+/* 1. Menú Header - Sidebar para Desktop */
+.header__sidebar {
+    width: 16rem;
+    background: var(--bg-white);
+    color: var(--color-black);
+    position: fixed;
+    padding-top: 1rem;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+}
+.header__sidebar-container {
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+}
+/* Logo Sidebar */
+.header__sidebar-logo {
+    position: relative;
+    z-index: 0;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+.header__sidebar-logo img {
+    height: auto;
+    max-height: 60px;
+    width: auto;
+    max-width: 60px;
+}
+/* Titulo sidebar */
+.header__sidebar-titulo {
+    margin: 20px 20px 10px;
+}
+.header__sidebar-titulo h1 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.main-menu {
+    display: block;
+    position: relative;
+    padding: 20px 0 40px;
+}
+.main-menu li {
+    display: block;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid var(--bg-gray-3);
+}
+.main-menu li:last-child {
+    border-bottom: 1px solid var(--bg-gray-3);
+}
+.main-menu li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+.main-menu li:hover::after,
+.main-menu .current-menu-item::after {
+    background-color: var(--color-blue);
+}
+.main-menu li:hover,
+.main-menu .current-menu-item {
+    background-color: var(--bg-gray-2);
+}
+.main-menu a {
+    color: var(--color-black);
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.85;
+    letter-spacing: 0;
+    display: block;
+    padding: 10px 20px;
+}
+
+
+/* 2. Menú Offcanvas - Móvil */
+.offcanvas__menu {
+    position: fixed;
+    width: 100%;
+    max-width: 320px;
+    height: calc(100vh - 50px);
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0 0;
+    background: var(--bg-white);
+    color: var(--color-black);
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.5s ease, visibility 0.3s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.offcanvas__menu-contenido {
+    padding-bottom: 50px;
+    height: 100%;
+    overflow-y: auto;
+}
+.offcanvas__menu-logo {
+    position: relative;
+    margin: 20px auto;
+    text-align: center;
+    z-index: 0;
+}
+.offcanvas__menu-logo img {
+    height: auto;
+    max-height: 60px;
+    width: auto;
+    max-width: 60px;
+}
+.offcanvas__menu-titulo {
+    position: relative;
+    z-index: 1;
+    margin: 20px 20px 10px 20px;
+    text-align: center;
+}
+.offcanvas__menu-titulo-h1 {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2em;
+    color: var(--color-black);
+    letter-spacing: 0px;
+}
+.offcanvas__menu-movil {
+    display: block;
+    position: relative;
+    padding: 25px 0 40px 0;
+}
+.offcanvas__menu-movil-lista {
+    list-style: none;
+}
+.offcanvas__menu-movil-lista li {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.offcanvas__menu-item.offcanvas__menu-activo a,
+.offcanvas__menu-item:hover a {
+    background-color: var(--bg-gray-2);
+}
+.offcanvas__menu-movil-lista li:first-child a {
+    border-color: var(--bg-gray-3);
+    border-top: 1px solid var(--bg-gray-3);
+}
+.offcanvas__menu-item a {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.85em;
+    color: var(--color-black);
+    letter-spacing: 0;
+    padding: 10px 20px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    border-bottom: 1px solid var(--bg-gray-3);
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+.offcanvas__menu-item a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--bg-danger);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.offcanvas__menu-item:hover a::after,
+.offcanvas__menu-item.offcanvas__menu-activo a::after {
+    opacity: 1;
+}
+.offcanvas__menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 2.1 Boton CV  */
+.offcanvas__menu-cv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+.offcanvas__menu-cv button {
+    border: 2px solid var(--bg-danger);
+    padding: 10px 20px;
+    background-color: var(--bg-white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: var(--color-black);
+    letter-spacing: 0;
+    margin-bottom: 40px;
+}
+.offcanvas__menu-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.offcanvas__menu-social a {
+    display: inline-block;
+    margin: 0 10px;
+    width: 28px;
+    height: 28px;
+    color: var(--color-gray);
+    background-color: var(--bg-gray-light);
+    text-align: center;
+}
+.offcanvas__menu-social a i {
+    font-size: 14px;
+    line-height: 28px;
+}
+.offcanvas__menu-copy {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px 10px 15px;
+    line-height: 14px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--bg-gray-dark);
+}
+
+
+/* Responsive */
+@media (min-width: 768px) {
+    .header__sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+}

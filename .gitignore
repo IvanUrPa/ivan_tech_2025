@@ -63,6 +63,7 @@ node_modules/
 #
 /wp-content/themes/*
 !/wp-content/themes/ivantech-theme/
+!/wp-content/themes/ivantech-theme/img/*
 
 # Archivos del proyecto que sí deben incluirse
 #

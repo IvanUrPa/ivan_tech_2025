@@ -1,0 +1,43 @@
+.search-form {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 280px; /* ajusta el ancho según tu diseño */
+}
+
+.search-label {
+  position: relative;
+  width: 100%;
+}
+
+.search-field {
+  width: 100%;
+  padding: 8px 36px 8px 10px; /* espacio a la derecha para el icono */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.search-field:focus {
+  outline: none;
+  border-color: var(--color-blue);
+  box-shadow: 0 0 3px var(--color-blue);
+}
+
+.search-submit {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.search-submit:hover {
+  color: var(--color-blue);
+}

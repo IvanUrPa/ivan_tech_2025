@@ -1,0 +1,20 @@
+/*
+Theme Name: Ivan Tech
+Theme URI: 
+Description: Tema diseñado para el sitio Ivan.tech para mostrar la hoja de vida del desarrollador
+Version: 1.0
+Author: Ivan Urbano
+Author URI: https://ivan.tech
+Text Domain: ivantech
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: css, flexbox, CV, mobile first, css grid
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+
+@import url('css/general.css');
+@import 'css/mainMenu.css';
+@import 'css/mobileMenu.css';
+@import 'css/mainContent.css';
+@import 'css/searchForm.css';
